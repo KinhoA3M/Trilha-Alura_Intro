@@ -1,21 +1,41 @@
 import UIKit
 
-let totalDeCalorias = [50.5, 100]
+// Criar a Primeira Refeição
 
+let nome: String = "Macarrão"
+let felicidade: String = "5"
 
+//Criar Segunda Refeição
 
+let nome2:  String = "Churros"
+let felicidade2: String = "4"
 
-func todasCalorias(totalDeCalorias: [Double]) -> Double {
-    var total: Double = 0
-    
-    for caloria in totalDeCalorias {
-        total += caloria
-    }
-    
-    return total
+//----------------
+
+// Criar Classe que agrupe as Características
+
+class Refeicao {
+    var nome: String = "Macarrão"
+    let felicidade: String = "5"
 }
 
-let  total = todasCalorias(totalDeCalorias: [50.5,100,400])
+//Instanciando a classe
 
-print(total)
+let refeicao: Refeicao = Refeicao()
+
+refeicao.nome = "Arroz"
+
+refeicao.nome = "Feijão"
+
+print(refeicao.nome)
+
+class Refeicao2 {
+    var nome: String = "Churros"
+    var felicidade: String = "4"
+}
+
+var refeicao2 = Refeicao2()
+
+print(refeicao2.nome)
+
 
