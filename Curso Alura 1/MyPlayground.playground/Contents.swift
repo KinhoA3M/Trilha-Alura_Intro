@@ -1,52 +1,63 @@
 import UIKit
 
 class Refeicao {
-    var nome: String?
-    var felicidade: String?
-}
-
-//Instanciando a classe
-
-let refeicao = Refeicao()
-refeicao.nome = "Macarrao"
-
- //Cuidado => forced unwrap
-//print(refeicao.nome!)
-
-if refeicao.nome != nil {
-    print(refeicao.nome!)
-}
-
-//Boas práticas para extrair valores opcionais:
-
-if let nome = refeicao.nome {
-    print(nome)
-}
-
-//guard let (pode chamar variavel de fora da condicional
-
-func exibeNomeDaRefeicao() {
-    if let nome = refeicao.nome {
-        print(nome)
-    }
     
-    guard let nome = refeicao.nome else {
-        print("Sem Valor")
-        return
-    }
+    //Atributos
+    var nome: String
+    var felicidade: String
+    var itens: Array<Item> = []
     
-    print(nome)
+    //Método Construtor
+    
+    init(nome: String, felicidade: String) {
+        self.nome = nome
+        self.felicidade = felicidade
+    }
+    func totalDeCalorias() -> Double {
+        var total = 0.0
+        
+        for item in itens {
+            total += item.calorias
+        }
+        
+        return total
+    }
 }
 
-exibeNomeDaRefeicao()
-
-let numero = Int("5")
-
-if let n = numero {
-    print(n)
-} else {
-    print("Erro ao converter para int")
+class Item {
+    var nome: String
+    var calorias: Double
+    
+    init(nome: String, calorias: Double) {
+        self.nome = nome
+        self.calorias = calorias
+    }
 }
+
+let arroz = Item(nome: "Arroz", calorias: 51.0)
+let feijao = Item(nome: "Feijao", calorias: 90.0)
+let contraFile = Item(nome: "Contra Filé", calorias: 287.0)
+
+let refeicao = Refeicao(nome: "Almoço", felicidade: "5")
+refeicao.itens.append(arroz)
+refeicao.itens.append(feijao)
+refeicao.itens.append(contraFile)
+
+print(refeicao.nome)
+if let primeiroItemDaLista = refeicao.itens.first {
+    print(refeicao.itens.first?.nome)
+}
+
+print(refeicao.totalDeCalorias())
+
+
+
+
+
+
+
+
+
 
 
 
