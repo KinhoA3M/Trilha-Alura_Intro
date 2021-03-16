@@ -108,9 +108,9 @@
 				C7B2B02C25FA65E400D3B6A3 /* Info.plist */,
 				C7B2B05525FA818300D3B6A3 /* FilesConfigs */,
 				C7B2B05425FA816500D3B6A3 /* infrastructure */,
+				C7B2B05125FA7C3A00D3B6A3 /* Controller */,
 				C7B2B05325FA7CD500D3B6A3 /* Model */,
 				C7B2B05225FA7C4000D3B6A3 /* View */,
-				C7B2B05125FA7C3A00D3B6A3 /* Controller */,
 			);
 			path = "Curso Alura 1";
 			sourceTree = "<group>";
