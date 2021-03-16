@@ -50,7 +50,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yLr-vR-BcO">
-                                <rect key="frame" x="0.0" y="356" width="414" height="402"/>
+                                <rect key="frame" x="0.0" y="356" width="390" height="402"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
@@ -73,12 +73,13 @@
                     <navigationItem key="navigationItem" id="usR-St-Jkk"/>
                     <connections>
                         <outlet property="felicidadeTextField" destination="Fd3-O9-NfT" id="l87-xx-ssO"/>
+                        <outlet property="itensTableView" destination="yLr-vR-BcO" id="E67-0m-cmR"/>
                         <outlet property="nomeTextField" destination="8gM-gE-ctK" id="hNE-JB-e18"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="79.710144927536234" y="73.660714285714278"/>
+            <point key="canvasLocation" x="78.461538461538453" y="73.222748815165872"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O8a-MN-eVu">

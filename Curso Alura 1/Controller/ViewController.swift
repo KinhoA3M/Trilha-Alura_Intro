@@ -11,8 +11,14 @@ protocol AdicionaRefeicaoDelegate {
     func add(_ refeicao: Refeicao)
 }
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-        
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdicionaItensDelegate {
+    
+    
+    // MARK: - IBOutlets
+    
+    
+    @IBOutlet weak var itensTableView: UITableView!
+    
     //MARK: - Atributos
     
     var delegate: AdicionaRefeicaoDelegate?
@@ -29,6 +35,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet var nomeTextField: UITextField!
     @IBOutlet weak var felicidadeTextField: UITextField!
+    
+    //View - life cycle
+    
+    override func viewDidLoad() {
+        let botaoAdicionarItem = UIBarButtonItem(title: "adicionar", style: .plain, target: self, action: #selector(adicionarItens))
+        navigationItem.rightBarButtonItem = botaoAdicionarItem
+    }
+    
+    @objc func adicionarItens() {
+        let adicionarItensViewController = AdicionaritensViewController(delegate: self)
+        navigationController?.pushViewController(adicionarItensViewController, animated: true)
+    }
+    
+    func add(_ item: Item) {
+        itens.append(item)
+        itensTableView.reloadData()
+    }
     
     // MARK: -UITableViewDataSource
     
@@ -62,7 +85,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             celula.accessoryType = .none
             
             let item  = itens[indexPath.row]
-            if let position = itensSelecionados.index(of: item) {
+            if let position = itensSelecionados.firstIndex(of: item) {
                 itensSelecionados.remove(at: position)
             }
         }
