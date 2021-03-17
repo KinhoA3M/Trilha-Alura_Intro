@@ -19,6 +19,9 @@
 		C7B2B03625FA65E400D3B6A3 /* Curso_Alura_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B2B03525FA65E400D3B6A3 /* Curso_Alura_1Tests.swift */; };
 		C7B2B04125FA65E400D3B6A3 /* Curso_Alura_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B2B04025FA65E400D3B6A3 /* Curso_Alura_1UITests.swift */; };
 		C7C8653326022FEE0031D9C4 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C8653226022FEE0031D9C4 /* Alerta.swift */; };
+		C7C8653B260263A70031D9C4 /* RemoveRefeicaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C8653A260263A70031D9C4 /* RemoveRefeicaoViewController.swift */; };
+		C7C8654326027DDE0031D9C4 /* RefeicaoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C8654226027DDE0031D9C4 /* RefeicaoDao.swift */; };
+		C7C86548260288100031D9C4 /* ItemDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C86547260288100031D9C4 /* ItemDao.swift */; };
 		C7F5004526003CA9001B385D /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5004426003CA9001B385D /* Refeicao.swift */; };
 		C7F5004A26003D2C001B385D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5004926003D2C001B385D /* Item.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +63,9 @@
 		C7B2B04025FA65E400D3B6A3 /* Curso_Alura_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curso_Alura_1UITests.swift; sourceTree = "<group>"; };
 		C7B2B04225FA65E400D3B6A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7C8653226022FEE0031D9C4 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
+		C7C8653A260263A70031D9C4 /* RemoveRefeicaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRefeicaoViewController.swift; sourceTree = "<group>"; };
+		C7C8654226027DDE0031D9C4 /* RefeicaoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicaoDao.swift; sourceTree = "<group>"; };
+		C7C86547260288100031D9C4 /* ItemDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDao.swift; sourceTree = "<group>"; };
 		C7F5004426003CA9001B385D /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
 		C7F5004926003D2C001B385D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,9 +122,9 @@
 				C7B2B02C25FA65E400D3B6A3 /* Info.plist */,
 				C7B2B05525FA818300D3B6A3 /* FilesConfigs */,
 				C7B2B05425FA816500D3B6A3 /* infrastructure */,
-				C7B2B05125FA7C3A00D3B6A3 /* Controller */,
 				C7B2B05325FA7CD500D3B6A3 /* Model */,
 				C7B2B05225FA7C4000D3B6A3 /* View */,
+				C7B2B05125FA7C3A00D3B6A3 /* Controller */,
 			);
 			path = "Curso Alura 1";
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 				C7B2B02225FA65E200D3B6A3 /* ViewController.swift */,
 				C768D7C62600551000E32839 /* RefeicoesTableViewController.swift */,
 				C74C2E2C2600E32D0056E13F /* AdicionaritensViewController.swift */,
+				C7C8653A260263A70031D9C4 /* RemoveRefeicaoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,10 +172,12 @@
 		C7B2B05325FA7CD500D3B6A3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C7F5004426003CA9001B385D /* Refeicao.swift */,
 				C7B2B01E25FA65E200D3B6A3 /* AppDelegate.swift */,
 				C7F5004926003D2C001B385D /* Item.swift */,
-				C7F5004426003CA9001B385D /* Refeicao.swift */,
 				C7C8653226022FEE0031D9C4 /* Alerta.swift */,
+				C7C8654226027DDE0031D9C4 /* RefeicaoDao.swift */,
+				C7C86547260288100031D9C4 /* ItemDao.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,6 +331,9 @@
 				C7C8653326022FEE0031D9C4 /* Alerta.swift in Sources */,
 				C7F5004A26003D2C001B385D /* Item.swift in Sources */,
 				C7B2B02325FA65E200D3B6A3 /* ViewController.swift in Sources */,
+				C7C8653B260263A70031D9C4 /* RemoveRefeicaoViewController.swift in Sources */,
+				C7C86548260288100031D9C4 /* ItemDao.swift in Sources */,
+				C7C8654326027DDE0031D9C4 /* RefeicaoDao.swift in Sources */,
 				C74C2E2E2600E32D0056E13F /* AdicionaritensViewController.swift in Sources */,
 				C7B2B01F25FA65E200D3B6A3 /* AppDelegate.swift in Sources */,
 				C768D7C72600551000E32839 /* RefeicoesTableViewController.swift in Sources */,
