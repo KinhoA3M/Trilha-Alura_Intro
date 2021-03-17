@@ -18,10 +18,12 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let celula = UITableViewCell(style: .default, reuseIdentifier: nil)
         let refeicao = refeicoes[indexPath.row]
         celula.textLabel?.text = refeicao.nome
+        
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(mostrarDetalhes(_:)))
+        celula.addGestureRecognizer(longPress)
 
         return celula
     }
@@ -29,6 +31,17 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
     func add(_ refeicao: Refeicao) {
         refeicoes.append(refeicao)
         tableView.reloadData()
+    }
+    
+    @objc func mostrarDetalhes(_ gesture: UILongPressGestureRecognizer) {
+        if gesture.state == .began {
+            let celula = gesture.view as! UITableViewCell
+            
+            guard let indexPAth = tableView.indexPath(for: celula) else {return}
+            let refeicao = refeicoes[indexPAth.row]
+            
+            print("refeicao: \(refeicao.nome)")
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
