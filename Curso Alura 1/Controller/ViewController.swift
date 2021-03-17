@@ -17,7 +17,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: - IBOutlets
     
     
-    @IBOutlet weak var itensTableView: UITableView!
+    @IBOutlet weak var itensTableView:
+        UITableView?
     
     //MARK: - Atributos
     
@@ -50,7 +51,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func add(_ item: Item) {
         itens.append(item)
-        itensTableView.reloadData()
+        if let tableView = itensTableView {
+            tableView.reloadData()
+        } else {
+            Alerta(controller: self).exibe()
+        }
     }
     
     // MARK: -UITableViewDataSource
